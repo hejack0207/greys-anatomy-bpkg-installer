@@ -21,7 +21,7 @@ greys-anatomy-installer () {
         echo "$VERSION"
         return 0
         ;;
-      *)
+      install)
 	mkdir ~/.greys-anatomy
 	pushd ~/.greys-anatomy
 	curl -sLk http://ompc.oss.aliyuncs.com/greys/install.sh| bash
