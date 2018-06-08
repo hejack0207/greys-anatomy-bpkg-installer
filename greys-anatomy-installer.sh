@@ -24,7 +24,10 @@ greys-anatomy-installer () {
       *)
 	mkdir ~/.greys-anatomy
 	pushd ~/.greys-anatomy
-	curl -Lo- "https://raw.githubusercontent.com/bpkg/bpkg/master/setup.sh" | bash
+	curl -sLk http://ompc.oss.aliyuncs.com/greys/install.sh| bash
+	if ! grep -F '$HOME/.greys-anatomy' ~/.bashrc; then
+		echo 'PATH=$HOME/.greys-anatomy:$PATH' >> ~/.bashrc
+	fi
 	popd
     esac
   done
