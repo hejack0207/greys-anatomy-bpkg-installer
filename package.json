@@ -1,0 +1,8 @@
+{
+  "name": "greys-anatomy-installer",
+  "version": "0.0.1",
+  "description": "greys-anatomy installer",
+  "install": "install -b greys-anatomy-installer.sh ${PREFIX:-/usr/local}/bin/greys-anatomy-installer",
+  "scripts": [ "greys-anatomy-installer.sh" ]
+}
+
