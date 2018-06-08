@@ -21,6 +21,11 @@ greys-anatomy-installer () {
         echo "$VERSION"
         return 0
         ;;
+      *)
+	mkdir ~/.greys-anatomy
+	pushd ~/.greys-anatomy
+	curl -Lo- "https://raw.githubusercontent.com/bpkg/bpkg/master/setup.sh" | bash
+	popd
     esac
   done
 
